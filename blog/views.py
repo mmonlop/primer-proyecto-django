@@ -22,5 +22,5 @@ def detalle_post(request,pk):
     return render(request,'blog/detallePost.html',{'post':post})
 
 def autores_listado(request):
-    post = Post.objects.all()
-    return render(request,'blog/autores.html',{'post':post})
+    posts = Post.objects.all()
+    return render(request,'blog/autores.html',{'posts':posts})
