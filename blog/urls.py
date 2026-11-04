@@ -5,5 +5,6 @@ urlpatterns = [
     path('',views.principal,name='principal'),
     path('ji', views.ji, name='ji'),
     path('<int:pk>', views.detalle_post, name='detalle'),
-    path('autores/', views.autores_listado,name='autores')
+    path('autores/', views.autores_listado,name='autores'),
+    path('autores/<str:nombre>/', views.entradas_autores,name='entradaAutores') 
 ]

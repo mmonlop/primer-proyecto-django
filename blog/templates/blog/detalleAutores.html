@@ -1,13 +1,15 @@
 {% extends 'blog/base.html' %}
 
-{% block titulo %}AUTOR: {{post.autor}}{% endblock %}
+{% block titulo %}AUTOR: {{autores.autor}}{% endblock %}
 
 {% block contenido %}
 
     <ul>
-        {% for post in posts %}
-            <a href="">{{post.autor}}</a> <br>
+        {%for post in autores %}
+            <p>{{post.titulo}}</p>
         {%endfor%}
     </ul>
+
+    <a href="{% url 'autores' %}">Volver</a>
 
 {% endblock %}

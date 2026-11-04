@@ -6,8 +6,10 @@
 
     <ul>
         {% for post in posts %}
-            <a href="">{{post.autor}}</a> <br>
+            <a href="{% url 'entradaAutores' nombre=post.autor%}">{{post.autor}}</a> <br>
         {%endfor%}
     </ul>
+
+    <a href="{% url 'principal' %}">Volver</a>
 
 {% endblock %}
