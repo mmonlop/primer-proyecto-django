@@ -5,8 +5,8 @@
 {% block contenido %}
 
     <ul>
-        {% for post in posts %}
-            <a href="{% url 'entradaAutores' nombre=post.autor%}">{{post.autor}}</a> <br>
+        {% for autor in autores %}
+            <a href="{% url 'entradaAutores' pk=autor.pk %}">{{autor.nombre}}</a>
         {%endfor%}
     </ul>
 

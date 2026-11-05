@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block titulo %}CATEGORIA: {{categoria.nombre}}{% endblock %}
+
+{% block contenido %}
+
+    <ul>
+        {% for post in posts %}
+            <p>{{post}}</p>
+
+        {%endfor%}
+    </ul>
+
+    <a href="{% url 'principal' %}">Volver</a>
+
+{% endblock %}

@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
+
+{% block titulo %}{% endblock %}
+
+{%block css%}
+    
+{%endblock%}
+
+{% block contenido %}
     <p>Funciona! </p>
     
     <ul>
@@ -13,8 +14,14 @@
             <a href="{% url 'detalle' pk=post.pk %}">{{post.titulo}}</a><br>
         {%endfor%}
         <a href="{% url 'autores'%}">Autores</a>
-        
     </ul>
 
-</body>
-</html>
+    <h3>Categorias</h3>
+  
+    <ul>
+        {% for categoria in categorias %}
+            <a href="{% url 'categorias' pk=categoria.pk%}">{{categoria.nombre}}</a> <br>
+        {%endfor%}
+    </ul>
+
+{% endblock %}
